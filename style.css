@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6da3f7, #436fbf);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    max-width: 400px;
+    width: 100%;
+}
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #f0f8ff;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]::placeholder {
+    color: #b0c4de;
+}
+
+.shiny-button {
+    background: linear-gradient(145deg, #63a4ff, #3b77e3);
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shiny-button:hover {
+    background: linear-gradient(145deg, #5b94e6, #366ed1);
+}
+
+.shiny-button:active {
+    transform: scale(0.98);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #3b77e3;
+}
+/* /////////////// */
+#imgbox{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.75s;
+}
+#imgbox img{
+    width: 100px;
+    padding: 10px;
+}
+#imgbox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #679ce7;
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
